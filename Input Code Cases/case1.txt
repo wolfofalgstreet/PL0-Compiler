@@ -1,0 +1,15 @@
+const n = 13;
+var i, h;
+procedure sub;
+    const k = 7;
+    var j, h;
+    begin
+        j := n;
+        i := 1;
+        h := k;
+    end;
+begin
+    i := 3;
+    h := 9;
+    call sub;
+end.

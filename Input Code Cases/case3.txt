@@ -1,0 +1,10 @@
+/* Read and write test. */
+var m;
+begin
+    read m;
+    write m;
+    read m;
+    write m;
+    read m;
+    write m;
+end.

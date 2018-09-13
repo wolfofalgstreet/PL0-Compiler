@@ -1,0 +1,82 @@
+Source Program:
+
+/* Read and write test. */
+var m;
+begin
+    read m;
+    write m;
+    read m;
+    write m;
+    read m;
+    write m;
+end.
+
+
+Lexime List:
+
+29 2 m 18 21 32 2 m 18 31 2 m 18 32 2 m 18 31 2 m 18 32 2 m 18 31 2 m 18 22 19 
+
+Internal Symbol Representation:
+
+varsym identsym m semicolonsym beginsym readsym identsym m semicolonsym writesym identsym m semicolonsym readsym identsym m semicolonsym writesym identsym m semicolonsym readsym identsym m semicolonsym writesym identsym m semicolonsym endsym periodsym 
+
+No errors, program is syntatically correct.
+
+
+Machine Code: 
+
+7 0 0 1
+6 0 0 5
+9 0 0 2
+4 0 0 4
+3 0 0 4
+9 0 0 1
+9 0 0 2
+4 0 0 4
+3 0 0 4
+9 0 0 1
+9 0 0 2
+4 0 0 4
+3 0 0 4
+9 0 0 1
+9 0 0 3
+
+
+Program Stack Trace:
+Inital Values			pc	pb	sp
+0	jmp	0	0	1	 1	1	0	 
+RF: 0 0 0 0 0 0 0 0 
+1	inc	0	0	5	 2	1	5	 0 1 0 0 0 
+RF: 0 0 0 0 0 0 0 0 
+2	sio	0	0	2	 3	1	5	 0 1 0 0 0 
+RF: 32 0 0 0 0 0 0 0 
+3	sto	0	0	4	 4	1	5	 0 1 0 0 32 
+RF: 32 0 0 0 0 0 0 0 
+4	lod	0	0	4	 5	1	5	 0 1 0 0 32 
+RF: 32 0 0 0 0 0 0 0 
+5	sio	0	0	1	 6	1	5	 0 1 0 0 32 
+RF: 32 0 0 0 0 0 0 0 
+Print:  32
+6	sio	0	0	2	 7	1	5	 0 1 0 0 32 
+RF: 64 0 0 0 0 0 0 0 
+7	sto	0	0	4	 8	1	5	 0 1 0 0 64 
+RF: 64 0 0 0 0 0 0 0 
+8	lod	0	0	4	 9	1	5	 0 1 0 0 64 
+RF: 64 0 0 0 0 0 0 0 
+9	sio	0	0	1	 10	1	5	 0 1 0 0 64 
+RF: 64 0 0 0 0 0 0 0 
+Print:  64
+10	sio	0	0	2	 11	1	5	 0 1 0 0 64 
+RF: 128 0 0 0 0 0 0 0 
+11	sto	0	0	4	 12	1	5	 0 1 0 0 128 
+RF: 128 0 0 0 0 0 0 0 
+12	lod	0	0	4	 13	1	5	 0 1 0 0 128 
+RF: 128 0 0 0 0 0 0 0 
+13	sio	0	0	1	 14	1	5	 0 1 0 0 128 
+RF: 128 0 0 0 0 0 0 0 
+Print:  128
+14	sio	0	0	3	 0	1	0	 0
+RF: 128 0 0 0 0 0 0 0 
+
+Program Output:
+128

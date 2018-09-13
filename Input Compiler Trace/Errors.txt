@@ -1,0 +1,212 @@
+Source:
+
+var x, y, z, q;
+begin
+x := 36;
+y := 4;
+q := 10;
+z := (x + y) / q;
+end
+
+29 2 x 17 2 y 17 2 z 17 2 q 18 21 2 x 20 3 36 18 2 y 20 3 4 18 2 q 20 3 10 18 2 z 20 15 2 x 4 2 y 16 7 2 q 18 22 
+
+varsym identsym x commasym identsym y commasym identsym z commasym identsym q semicolonsym beginsym identsym x becomessym numbersym semicolonsym identsym y becomessym numbersym semicolonsym identsym q becomessym numbersym semicolonsym identsym z becomessym lparentsym identsym x plussym identsym y rparentsym slashsym identsym q semicolonsym endsym 
+
+Error Code: Period expected
+
+
+Source:
+
+var x, y, z, q;
+begin
+x := 36
+y := 4;
+q := 10;
+z := (x + y) / q;
+end.
+
+29 2 x 17 2 y 17 2 z 17 2 q 18 21 2 x 20 3 36 2 y 20 3 4 18 2 q 20 3 10 18 2 z 20 15 2 x 4 2 y 16 7 2 q 18 22 19 
+
+varsym identsym x commasym identsym y commasym identsym z commasym identsym q semicolonsym beginsym identsym x becomessym numbersym identsym y becomessym numbersym semicolonsym identsym q becomessym numbersym semicolonsym identsym z becomessym lparentsym identsym x plussym identsym y rparentsym slashsym identsym q semicolonsym endsym periodsym 
+
+Error Code: Semicolon between statements missing
+
+
+Source: 
+
+var x, y, z, q;
+begin
+x = 36;
+y := 4;
+q := 10;
+z := (x + y) / q;
+end.
+
+29 2 x 17 2 y 17 2 z 17 2 q 18 21 2 x 9 3 36 18 2 y 20 3 4 18 2 q 20 3 10 18 2 z 20 15 2 x 4 2 y 16 7 2 q 18 22 19 
+
+varsym identsym x commasym identsym y commasym identsym z commasym identsym q semicolonsym beginsym identsym x eqlsym numbersym semicolonsym identsym y becomessym numbersym semicolonsym identsym q becomessym numbersym semicolonsym identsym z becomessym lparentsym identsym x plussym identsym y rparentsym slashsym identsym q semicolonsym endsym periodsym 
+
+Error Code: Use = instead of :=
+
+Source: 
+
+var x, y, z, q;
+begin
+x := 36;
+y := p;
+q := 10;
+z := (x + y) / q;
+end.
+
+29 2 x 17 2 y 17 2 z 17 2 q 18 21 2 x 20 3 36 18 2 y 20 2 p 18 2 q 20 3 10 18 2 z 20 15 2 x 4 2 y 16 7 2 q 18 22 19 
+
+varsym identsym x commasym identsym y commasym identsym z commasym identsym q semicolonsym beginsym identsym x becomessym numbersym semicolonsym identsym y becomessym identsym p semicolonsym identsym q becomessym numbersym semicolonsym identsym z becomessym lparentsym identsym x plussym identsym y rparentsym slashsym identsym q semicolonsym endsym periodsym 
+
+Error Code: Undeclared identifier
+
+Source:
+
+var x, y, z, q;
+begin
+x := 36;
+y <> 0;
+q := 10;
+z := (x + y) / q;
+end.
+
+29 2 x 17 2 y 17 2 z 17 2 q 18 21 2 x 20 3 36 18 2 y 10 3 0 18 2 q 20 3 10 18 2 z 20 15 2 x 4 2 y 16 7 2 q 18 22 19 
+
+varsym identsym x commasym identsym y commasym identsym z commasym identsym q semicolonsym beginsym identsym x becomessym numbersym semicolonsym identsym y neqsym numbersym semicolonsym identsym q becomessym numbersym semicolonsym identsym z becomessym lparentsym identsym x plussym identsym y rparentsym slashsym identsym q semicolonsym endsym periodsym 
+
+Error Code: Incorrect symbol following statement
+
+Source:
+
+var x, y, z, q;
+begin
+x := 36;
+y := 4;
+q := 10;
+z := (x + y / q;
+end.
+
+29 2 x 17 2 y 17 2 z 17 2 q 18 21 2 x 20 3 36 18 2 y 20 3 4 18 2 q 20 3 10 18 2 z 20 15 2 x 4 2 y 7 2 q 18 22 19 
+
+varsym identsym x commasym identsym y commasym identsym z commasym identsym q semicolonsym beginsym identsym x becomessym numbersym semicolonsym identsym y becomessym numbersym semicolonsym identsym q becomessym numbersym semicolonsym identsym z becomessym lparentsym identsym x plussym identsym y slashsym identsym q semicolonsym endsym periodsym 
+
+Error Code: Right parenthesis missing
+
+Source:
+
+var x, y, z, q;
+begin
+x := 36;
+y := 4;
+q := 10;
+z := (x + y)  q;
+end.
+
+29 2 x 17 2 y 17 2 z 17 2 q 18 21 2 x 20 3 36 18 2 y 20 3 4 18 2 q 20 3 10 18 2 z 20 15 2 x 4 2 y 16 2 q 18 22 19 
+
+varsym identsym x commasym identsym y commasym identsym z commasym identsym q semicolonsym beginsym identsym x becomessym numbersym semicolonsym identsym y becomessym numbersym semicolonsym identsym q becomessym numbersym semicolonsym identsym z becomessym lparentsym identsym x plussym identsym y rparentsym identsym q semicolonsym endsym periodsym 
+
+Error Code: Semicolon between statements missing
+
+Source:
+
+var x, y, z, q;
+begin
+x := 36;
+y := 4;
+q := 10;
+if y  q then
+	z := 1;
+z := (x + y)  q;
+end.
+
+
+29 2 x 17 2 y 17 2 z 17 2 q 18 21 2 x 20 3 36 18 2 y 20 3 4 18 2 q 20 3 10 18 23 2 y 2 q 24 2 z 20 3 1 18 2 z 20 15 2 x 4 2 y 16 2 q 18 22 19 
+
+varsym identsym x commasym identsym y commasym identsym z commasym identsym q semicolonsym beginsym identsym x becomessym numbersym semicolonsym identsym y becomessym numbersym semicolonsym identsym q becomessym numbersym semicolonsym ifsym identsym y identsym q thensym identsym z becomessym numbersym semicolonsym identsym z becomessym lparentsym identsym x plussym identsym y rparentsym identsym q semicolonsym endsym periodsym 
+
+Error Code: Relational operator expected
+
+Source:
+
+var x, y, z, q;
+begin
+x := 36;
+y := 4;
+q := 10;
+if y < q then
+	z := 09872621;
+z := (x + y)  q;
+end.
+
+WARNING!: Number 09872621 is too long!
+
+Source:
+
+var x, y, z, q;
+begin
+x := 36;
+y := 4;
+q := 10;
+if y < q 
+	z := 2;
+z := (x + y)  q;
+end.
+
+
+29 2 x 17 2 y 17 2 z 17 2 q 18 21 2 x 20 3 36 18 2 y 20 3 4 18 2 q 20 3 10 18 23 2 y 11 2 q 2 z 20 3 2 18 2 z 20 15 2 x 4 2 y 16 2 q 18 22 19 
+
+varsym identsym x commasym identsym y commasym identsym z commasym identsym q semicolonsym beginsym identsym x becomessym numbersym semicolonsym identsym y becomessym numbersym semicolonsym identsym q becomessym numbersym semicolonsym ifsym identsym y lessym identsym q identsym z becomessym numbersym semicolonsym identsym z becomessym lparentsym identsym x plussym identsym y rparentsym identsym q semicolonsym endsym periodsym 
+
+Error Code: then   expected
+
+Source:
+
+var x, y, z, q;
+begin
+x := 36;
+y := 4;
+q := 10;
+if y < q then
+	z := 2;
+z := *(x + y)  q;
+end.
+
+29 2 x 17 2 y 17 2 z 17 2 q 18 21 2 x 20 3 36 18 2 y 20 3 4 18 2 q 20 3 10 18 23 2 y 11 2 q 24 2 z 20 3 2 18 2 z 20 6 15 2 x 4 2 y 16 2 q 18 22 19 
+
+varsym identsym x commasym identsym y commasym identsym z commasym identsym q semicolonsym beginsym identsym x becomessym numbersym semicolonsym identsym y becomessym numbersym semicolonsym identsym q becomessym numbersym semicolonsym ifsym identsym y lessym identsym q thensym identsym z becomessym numbersym semicolonsym identsym z becomessym multsym lparentsym identsym x plussym identsym y rparentsym identsym q semicolonsym endsym periodsym 
+
+Error Code: An expression cannot begin with this symbol
+
+
+Source:
+
+var x, y, z, q;
+begin
+x := 2;
+y := 4;
+q := 10;
+if y < q then
+	z := 2;
+z := (x + y) / q;
+while x > 1
+	x := 1;
+end.
+
+
+29 2 x 17 2 y 17 2 z 17 2 q 18 21 2 x 20 3 2 18 2 y 20 3 4 18 2 q 20 3 10 18 23 2 y 11 2 q 24 2 z 20 3 2 18 2 z 20 15 2 x 4 2 y 16 7 2 q 18 25 2 x 13 3 1 2 x 20 3 1 18 22 19 
+
+varsym identsym x commasym identsym y commasym identsym z commasym identsym q semicolonsym beginsym identsym x becomessym numbersym semicolonsym identsym y becomessym numbersym semicolonsym identsym q becomessym numbersym semicolonsym ifsym identsym y lessym identsym q thensym identsym z becomessym numbersym semicolonsym identsym z becomessym lparentsym identsym x plussym identsym y rparentsym slashsym identsym q semicolonsym whilesym identsym x gtrsym numbersym identsym x becomessym numbersym semicolonsym endsym periodsym 
+
+Error Code: do   expected
+
+
+
+
+
+
+

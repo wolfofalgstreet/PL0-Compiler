@@ -1,0 +1,12 @@
+/* Testing for recursive calls */
+const n = 1;
+var i;
+procedure sub;
+    begin
+        i := i + 1;
+        if i < 3 then call sub;
+    end;
+begin
+    i := 1;
+    call sub;
+end.

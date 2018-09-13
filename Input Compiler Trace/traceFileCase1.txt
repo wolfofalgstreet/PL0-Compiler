@@ -1,0 +1,89 @@
+Source Program:
+
+const n = 13;
+var i, h;
+procedure sub;
+    const k = 7;
+    var j, h;
+    begin
+        j := n;
+        i := 1;
+        h := k;
+    end;
+begin
+    i := 3;
+    h := 9;
+    call sub;
+end.
+
+Lexime List:
+
+28 2 n 9 3 13 18 29 2 i 17 2 h 18 30 2 sub 18 28 2 k 9 3 7 18 29 2 j 17 2 h 18 21 2 j 20 2 n 18 2 i 20 3 1 18 2 h 20 2 k 18 22 18 21 2 i 20 3 3 18 2 h 20 3 9 18 27 2 sub 18 22 19 
+
+Internal Symbol Representation:
+
+constsym identsym n eqlsym numbersym 13 semicolonsym varsym identsym i commasym identsym h semicolonsym procsym identsym sub semicolonsym constsym identsym k eqlsym numbersym 7 semicolonsym varsym identsym j commasym identsym h semicolonsym beginsym identsym j becomessym identsym n semicolonsym identsym i becomessym numbersym 1 semicolonsym identsym h becomessym identsym k semicolonsym endsym semicolonsym beginsym identsym i becomessym numbersym 3 semicolonsym identsym h becomessym numbersym 9 semicolonsym callsym identsym sub semicolonsym endsym periodsym 
+
+No errors, program is syntatically correct.
+
+
+Machine Code: 
+
+7 0 0 10
+7 0 0 2
+6 0 0 6
+1 0 1 13
+4 0 0 4
+1 0 0 1
+4 0 1 4
+1 0 0 7
+4 0 1 5
+2 0 0 0
+6 0 0 6
+1 0 0 3
+4 0 0 4
+1 0 0 9
+4 0 0 5
+5 0 0 1
+9 0 0 3
+
+
+Program Stack Trace:
+Inital Values			pc	pb	sp
+0	jmp	0	0	10	 10	1	0	 
+RF: 0 0 0 0 0 0 0 0 
+10	inc	0	0	6	 11	1	6	 0 1 0 0 0 0 
+RF: 0 0 0 0 0 0 0 0 
+11	lit	0	0	3	 12	1	6	 0 1 0 0 0 0 
+RF: 3 0 0 0 0 0 0 0 
+12	sto	0	0	4	 13	1	6	 0 1 0 0 3 0 
+RF: 3 0 0 0 0 0 0 0 
+13	lit	0	0	9	 14	1	6	 0 1 0 0 3 0 
+RF: 9 0 0 0 0 0 0 0 
+14	sto	0	0	5	 15	1	6	 0 1 0 0 3 9 
+RF: 9 0 0 0 0 0 0 0 
+15	cal	0	0	1	 1	7	6	 0 1 0 0 3 9 
+RF: 9 0 0 0 0 0 0 0 
+1	jmp	0	0	2	 2	7	6	 0 1 0 0 3 9 
+RF: 9 0 0 0 0 0 0 0 
+2	inc	0	0	6	 3	7	12	 0 1 0 0 3 9 | 0 1 1 16 0 0 
+RF: 9 0 0 0 0 0 0 0 
+3	lit	0	1	13	 4	7	12	 0 1 0 0 3 9 | 0 1 1 16 0 0 
+RF: 13 0 0 0 0 0 0 0 
+4	sto	0	0	4	 5	7	12	 0 1 0 0 3 9 | 0 1 1 16 13 0 
+RF: 13 0 0 0 0 0 0 0 
+5	lit	0	0	1	 6	7	12	 0 1 0 0 3 9 | 0 1 1 16 13 0 
+RF: 1 0 0 0 0 0 0 0 
+6	sto	0	1	4	 7	7	12	 0 1 0 0 1 9 | 0 1 1 16 13 0 
+RF: 1 0 0 0 0 0 0 0 
+7	lit	0	0	7	 8	7	12	 0 1 0 0 1 9 | 0 1 1 16 13 0 
+RF: 7 0 0 0 0 0 0 0 
+8	sto	0	1	5	 9	7	12	 0 1 0 0 1 7 | 0 1 1 16 13 0 
+RF: 7 0 0 0 0 0 0 0 
+9	rtn	0	0	0	 16	1	6	 0 1 0 0 1 7 
+RF: 7 0 0 0 0 0 0 0 
+16	sio	0	0	3	 0	1	0	 0
+RF: 7 0 0 0 0 0 0 0 
+
+Program Output:
+7

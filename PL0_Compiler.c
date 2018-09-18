@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 // Compiler Modules
-#include "LexicalScan.c"
+#include "LexicalAnalyzer.c"
 #include "Parser.c"
 #include "VirtualMachine.c"
 
